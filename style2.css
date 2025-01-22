@@ -1,0 +1,846 @@
+*{
+    margin:0;
+}
+
+body{
+    background-color: rgb(51, 50, 50);
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+
+}
+.set {
+    display: flex;
+
+}
+.set i{
+    color: white;
+    margin-right: 10px;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+.it{
+    display: flex;
+    background-color: #f44546;
+    border: 2px white solid;
+    height: 30px;
+
+}
+nav p{
+    color: white;
+    margin-right: 10px;
+    margin-left: 10px;
+    line-height: 30px;
+}
+form{
+  display: flex;
+    margin-left: 10px;
+}
+i{
+    font-size: 25px;
+    color: aliceblue;
+}i:hover{
+    color:orange;
+}
+h1{
+    color: aliceblue;
+}
+form input[type="text"]{
+    flex-grow: 1;
+    
+    
+
+}
+.recipe-box img{
+    height: 200px;
+    width: 20vw;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+.recipe-box img:hover{
+    transform: scale(1.05);
+    /* border: 2px orange solid; */
+}
+.recipe-box h1{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    
+}
+.recipe-box#blur.active{
+filter: blur(20px);
+pointer-events: none;
+user-select: none;
+scroll-behavior: none;
+}
+
+
+
+.recipe-box p{
+    color: yellow;
+}
+.text{
+    font-family: shadows into Light;
+}
+.searchbtn{
+    background-color: #f44546;
+    margin-left: 10px;
+   
+}
+
+.recipe-box{
+text-align: center;
+
+}
+.b1{
+    display: flex;
+    justify-content:space-around;
+    margin-bottom: 30px;
+}
+@media screen and (max-width: 600px) {
+    #popup{
+        overflow: hidden;
+        height: 100vh;
+        width: 300px;
+    }
+    nav{
+        flex-direction: column;
+    }
+    nav form{
+        margin-top: 20px;
+        width: 80%;
+    }
+    .it{
+        margin-top: 20px;
+    }
+    
+    
+}
+body.active{
+    overflow: scroll;
+    
+
+
+    
+}
+body.active .blur{
+    filter:blur(5px);
+    background: rgba(0,0,0,0.8) ;
+    transition:filter 0ms ease-in-out 0ms;
+}
+#popup{
+    position: absolute;
+    
+    top: -100%;
+    left: 50%;
+    max-width: 450px;
+    transform: translate(-50%,-50%);
+    width: 98%;
+    padding: 50px;
+    box-shadow:0 5px 30px rgba(0,0,0,.30);
+    background:linear-gradient(white,rgb(244, 244, 182));
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    border-radius: 20px;
+    box-shadow: 3px 3px 0 rgb(48, 48, 48);
+
+}
+#popup h1{
+    color: black;
+}
+#popup.active{
+    top: 50%;
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+    margin-top: 100%;
+
+}
+#popup2{
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    margin-top: -25px;
+    max-width: 450px;
+    transform: translate(-50%,-50%);
+    width: 98%;
+    padding: 20px;
+    box-shadow:0 5px 30px rgba(0,0,0,.30);
+    background:linear-gradient(white,rgb(244, 244, 182));
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    border-radius: 20px;
+    box-shadow: 3px 3px 0 rgb(48, 48, 48);
+   
+
+}
+#popup2 h1{
+    color: black;
+}
+#popup2.active{
+   
+    top: 50%;
+    visibility: visible;
+    margin-top: 100%;
+    opacity: 1;
+    transition: 0.5s;
+  
+
+}
+#popup3{
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    max-width: 450px;
+    transform: translate(-50%,-50%);
+    width: 98%;
+    padding: 50px;
+    box-shadow:0 5px 30px rgba(0,0,0,.30);
+    background:linear-gradient(white,rgb(244, 244, 182));
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    border-radius: 20px;
+    box-shadow: 3px 3px 0 rgb(48, 48, 48);
+}
+#popup3 h1{
+    color: black;
+}
+#popup3.active{
+    top: 50%;
+    visibility: visible;
+    margin-top: 100%;
+    opacity: 1;
+    transition: 0.5s;
+   
+
+}
+#popup4{
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    max-width: 450px;
+    transform: translate(-50%,-50%);
+    width: 98%;
+    padding: 50px;
+    box-shadow:0 5px 30px rgba(0,0,0,.30);
+    background:linear-gradient(white,rgb(244, 244, 182));
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    border-radius: 20px;
+    box-shadow: 3px 3px 0 rgb(48, 48, 48);
+
+}
+#popup4 h1{
+    color: black;
+}
+#popup4.active{
+    top: 50%;
+    visibility: visible;
+    margin-top: 100%;
+    opacity: 1;
+    transition: 0.5s;
+   
+
+}
+#popup5{
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    max-width: 450px;
+    transform: translate(-50%,-50%);
+    width: 98%;
+    padding: 50px;
+    box-shadow:0 5px 30px rgba(0,0,0,.30);
+    background:linear-gradient(white,rgb(244, 244, 182));
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    border-radius: 20px;
+    box-shadow: 3px 3px 0 rgb(48, 48, 48);
+
+}
+#popup5 h1{
+    color: black;
+}
+#popup5.active{
+    top: 50%;
+    visibility: visible;
+    opacity: 1;
+    margin-top: 100%;
+    transition: 0.5s;
+ 
+
+}
+#popup6{
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    max-width: 450px;
+    transform: translate(-50%,-50%);
+    width: 98%;
+    padding: 50px;
+    box-shadow:0 5px 30px rgba(0,0,0,.30);
+    background:linear-gradient(white,rgb(244, 244, 182));
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    border-radius: 20px;
+    box-shadow: 3px 3px 0 rgb(48, 48, 48);
+
+}
+#popup6 h1{
+    color: black;
+}
+#popup6.active{
+    top: 50%;
+    visibility: visible;
+    margin-top: 100%;
+    opacity: 1;
+    transition: 0.5s;
+  
+
+}
+#popup7{
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    max-width: 450px;
+    transform: translate(-50%,-50%);
+    width: 98%;
+    padding: 50px;
+    box-shadow:0 5px 30px rgba(0,0,0,.30);
+    background:linear-gradient(white,rgb(244, 244, 182));
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    border-radius: 20px;
+    box-shadow: 3px 3px 0 rgb(48, 48, 48);
+
+}
+#popup7 h1{
+    color: black;
+}
+#popup7.active{
+    top: 50%;
+    visibility: visible;
+    margin-top: 100%;
+    opacity: 1;
+    transition: 0.5s;
+
+
+}
+#popup8{
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    max-width: 450px;
+    transform: translate(-50%,-50%);
+    width: 98%;
+    padding: 50px;
+    box-shadow:0 5px 30px rgba(0,0,0,.30);
+    background:linear-gradient(white,rgb(244, 244, 182));
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    border-radius: 20px;
+    box-shadow: 3px 3px 0 rgb(48, 48, 48);
+
+}
+#popup8 h1{
+    color: black;
+}
+#popup8.active{
+    top: 50%;
+    visibility: visible;
+    margin-top: 100%;
+    opacity: 1;
+    transition: 0.5s;
+  
+
+}
+#popup9{
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    max-width: 450px;
+    transform: translate(-50%,-50%);
+    width: 98%;
+    padding: 50px;
+    box-shadow:0 5px 30px rgba(0,0,0,.30);
+    background:linear-gradient(white,rgb(244, 244, 182));
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    border-radius: 20px;
+    box-shadow: 3px 3px 0 rgb(48, 48, 48);
+
+}
+#popup9 h1{
+    color: black;
+}
+#popup9.active{
+    top: 50%;
+    visibility: visible;
+    opacity: 1;
+    margin-top: 100%;
+    transition: 0.5s;
+  
+
+}
+#popup10{
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    max-width: 450px;
+    transform: translate(-50%,-50%);
+    width: 98%;
+    padding: 50px;
+    box-shadow:0 5px 30px rgba(0,0,0,.30);
+    background:linear-gradient(white,rgb(244, 244, 182));
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    border-radius: 20px;
+    box-shadow: 3px 3px 0 rgb(48, 48, 48);
+
+}
+#popup10 h1{
+    color: black;
+}
+#popup10.active{
+    top: 50%;
+    visibility: visible;
+    margin-top: 100%;
+    opacity: 1;
+    transition: 0.5s;
+   
+
+}
+#popup11{
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    max-width: 450px;
+    transform: translate(-50%,-50%);
+    width: 98%;
+    padding: 50px;
+    box-shadow:0 5px 30px rgba(0,0,0,.30);
+    background:linear-gradient(white,rgb(244, 244, 182));
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    border-radius: 20px;
+    box-shadow: 3px 3px 0 rgb(48, 48, 48);
+}
+#popup11 h1{
+    color: black;
+}
+#popup11.active{
+    top: 50%;
+    visibility: visible;
+    margin-top: 100%;
+    opacity: 1;
+    transition: 0.5s;
+   
+
+}
+#popup12{
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    max-width: 450px;
+    transform: translate(-50%,-50%);
+    width: 98%;
+    padding: 50px;
+    box-shadow:0 5px 30px rgba(0,0,0,.30);
+    background:linear-gradient(white,rgb(244, 244, 182));
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    border-radius: 20px;
+    box-shadow: 3px 3px 0 rgb(48, 48, 48);
+}
+#popup12 h1{
+    color: black;
+}
+#popup12.active{
+    top: 50%;
+    visibility: visible;
+    margin-top: 100%;
+    opacity: 1;
+    transition: 0.5s;
+   
+
+}
+#popup13{
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    max-width: 450px;
+    transform: translate(-50%,-50%);
+    width: 98%;
+    padding: 50px;
+    box-shadow:0 5px 30px rgba(0,0,0,.30);
+    background:linear-gradient(white,rgb(244, 244, 182));
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    border-radius: 20px;
+    box-shadow: 3px 3px 0 rgb(48, 48, 48);
+
+}
+#popup13 h1{
+    color: black;
+}
+#popup13.active{
+    top: 50%;
+    visibility: visible;
+    margin-top: 70%;
+    opacity: 1;
+    transition: 0.5s;
+ 
+
+}
+#popup14{
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    max-width: 450px;
+    transform: translate(-50%,-50%);
+    width: 98%;
+    padding: 50px;
+    box-shadow:0 5px 30px rgba(0,0,0,.30);
+    background:linear-gradient(white,rgb(244, 244, 182));
+    visibility: hidden;
+    border-radius: 20px;
+    box-shadow: 3px 3px 0 rgb(48, 48, 48);
+    opacity: 0;
+    transition: 0.5s;
+
+}
+#popup14 h1{
+    color: black;
+}
+#popup14.active{
+    top: 50%;
+    visibility: visible;
+    margin-top: 70%;
+    opacity: 1;
+    transition: 0.5s;
+   
+
+}
+#popup15{
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    max-width: 450px;
+    transform: translate(-50%,-50%);
+    width: 98%;
+    padding: 50px;
+    box-shadow:0 5px 30px rgba(0,0,0,.30);
+    background:linear-gradient(white,rgb(244, 244, 182));
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    border-radius: 20px;
+    box-shadow: 3px 3px 0 rgb(48, 48, 48);
+
+}
+
+#popup15 h1{
+    color: black;
+}
+#popup15.active{
+    top: 50%;
+    visibility: visible;
+    margin-top: 70%;
+    opacity: 1;
+    transition: 0.5s;
+   
+
+}
+#popup16{
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    max-width: 450px;
+    transform: translate(-50%,-50%);
+    width: 98%;
+    padding: 50px;
+    box-shadow:0 5px 30px rgba(0,0,0,.30);
+    background:linear-gradient(white,rgb(244, 244, 182));
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    border-radius: 20px;
+    box-shadow: 3px 3px 0 rgb(48, 48, 48);
+
+}
+
+#popup16 h1{
+    color: black;
+}
+#popup16.active{
+    top: 50%;
+    visibility: visible;
+    margin-top: 70%;
+    opacity: 1;
+    transition: 0.5s;
+   
+
+}
+#popup17{
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    max-width: 450px;
+    transform: translate(-50%,-50%);
+    width: 98%;
+    padding: 50px;
+    box-shadow:0 5px 30px rgba(0,0,0,.30);
+    background:linear-gradient(white,rgb(244, 244, 182));
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    border-radius: 20px;
+    box-shadow: 3px 3px 0 rgb(48, 48, 48);
+
+}
+
+#popup17 h1{
+    color: black;
+}
+#popup17.active{
+    top: 50%;
+    visibility: visible;
+    margin-top: 40%;
+    opacity: 1;
+    transition: 0.5s;
+  
+
+}
+#popup18{
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    max-width: 450px;
+    transform: translate(-50%,-50%);
+    width: 98%;
+    padding: 50px;
+    box-shadow:0 5px 30px rgba(0,0,0,.30);
+    background:linear-gradient(white,rgb(244, 244, 182));
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    border-radius: 20px;
+    box-shadow: 3px 3px 0 rgb(48, 48, 48);
+
+}
+
+#popup18 h1{
+    color: black;
+}
+#popup18.active{
+    top: 50%;
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+    margin-top: 40%;
+ 
+
+}
+#popup19{
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    max-width: 450px;
+    transform: translate(-50%,-50%);
+    width: 98%;
+    padding: 50px;
+    box-shadow:0 5px 30px rgba(0,0,0,.30);
+    background:linear-gradient(white,rgb(244, 244, 182));
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    border-radius: 20px;
+    box-shadow: 3px 3px 0 rgb(48, 48, 48);
+
+}
+
+#popup19 h1{
+    color: black;
+}
+#popup19.active{
+    top: 50%;
+    visibility: visible;
+    opacity: 1;
+    margin-top: 40%;
+    transition: 0.5s;
+   
+
+}
+#popup20{
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    max-width: 450px;
+    transform: translate(-50%,-50%);
+    width: 98%;
+    padding: 50px;
+    box-shadow:0 5px 30px rgba(0,0,0,.30);
+    background:linear-gradient(white,rgb(244, 244, 182));
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    border-radius: 20px;
+    box-shadow: 3px 3px 0 rgb(48, 48, 48);
+
+}
+
+#popup20 h1{
+    color: black;
+}
+#popup20.active{
+    top: 50%;
+    visibility: visible;
+    margin-top: 40%;
+    opacity: 1;
+    transition: 0.5s;
+  
+
+}
+#popup21{
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    max-width: 450px;
+    transform: translate(-50%,-50%);
+    width: 98%;
+    padding: 50px;
+    box-shadow:0 5px 30px rgba(0,0,0,.30);
+    background:linear-gradient(white,rgb(244, 244, 182));
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    border-radius: 20px;
+    box-shadow: 3px 3px 0 rgb(48, 48, 48);
+
+}
+
+#popup21 h1{
+    color: black;
+}
+#popup21.active{
+    top: 50%;
+    visibility: visible;
+    margin-top: 20%;
+    opacity: 1;
+    transition: 0.5s;
+  
+
+}
+#popup22{
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    max-width: 450px;
+    transform: translate(-50%,-50%);
+    width: 98%;
+    padding: 50px;
+    box-shadow:0 5px 30px rgba(0,0,0,.30);
+    background:linear-gradient(white,rgb(244, 244, 182));
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    border-radius: 20px;
+    box-shadow: 3px 3px 0 rgb(48, 48, 48);
+
+}
+
+#popup22 h1{
+    color: black;
+}
+#popup22.active{
+    top: 50%;
+    visibility: visible;
+    opacity: 1;
+    margin-top: 20%;
+    transition: 0.5s;
+ 
+
+}
+.popup23{
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    margin-top: -25px;
+    max-width: 450px;
+    transform: translate(-50%,-50%);
+    width: 98%;
+    padding: 50px;
+    box-shadow:0 5px 30px rgba(0,0,0,.30);
+    background:linear-gradient(white,rgb(244, 244, 182));
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    border-radius: 20px;
+    box-shadow: 3px 3px 0 rgb(48, 48, 48);
+
+}
+
+.popup23 h1{
+    color: black;
+}
+body.active .popup23{
+    top: 50%;
+    visibility: visible;
+    margin-top: 20%;
+    opacity: 1;
+    transition: 0.5s;
+   
+
+}
+#popup24{
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    max-width: 450px;
+    transform: translate(-50%,-50%);
+    width: 98%;
+    padding: 50px;
+    box-shadow:0 5px 30px rgba(0,0,0,.30);
+    background:linear-gradient(white,rgb(244, 244, 182));
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    border-radius: 20px;
+    box-shadow: 3px 3px 0 rgb(48, 48, 48);
+
+}
+.btn{
+    display: flex;
+    justify-content: space-around;
+
+}
+
+#popup24 h1{
+    color: black;
+}
+#popup24.active{
+    top: 50%;
+    visibility: visible;
+    opacity: 1;
+    margin-top: 20%;
+    transition: 0.5s;
+   
+
+}
